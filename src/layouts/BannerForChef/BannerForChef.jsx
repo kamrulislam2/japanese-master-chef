@@ -16,17 +16,17 @@ const BannerForChef = ({ data }) => {
         }}
       >
         <NavBar></NavBar>
-        <div className="shadow-xl flex justify-between">
+        <div className="shadow-xl flex justify-between items-center gap-x-20">
           <figure>
             <img
-              className="w-8/12 h-full rounded-full"
+              className="w-full h-full rounded-full"
               src={picture}
               alt="chef"
             />
           </figure>
           <div className="card-body">
             <h2 className="font-extrabold text-2xl mb-6">{name}</h2>
-            <p className="leading-relaxed text-lg text-gray-300 mb-6">
+            <p className="leading-relaxed text-lg text-gray-300 mb-6 w-10/12">
               {description}
             </p>
             <p className="leading-relaxed text-lg text-gray-300 mb-3">
