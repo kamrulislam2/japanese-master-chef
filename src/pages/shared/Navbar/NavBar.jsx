@@ -4,16 +4,23 @@ import { HiUserCircle } from "react-icons/hi";
 
 const NavBar = () => {
   return (
-    <div className="text-xl font-semibold inline-flex gap-4 items-center">
-      <Link to="/">Home</Link>
-      <Link to="/blog">Blog</Link>
+    <div>
+      <div className="text-xl font-semibold flex items-center justify-between ">
+        <h3 className="font-extrabold text-4xl">Japanese Master Chef</h3>
 
-      <Link to="/login">
-        <HiUserCircle className="text-4xl"></HiUserCircle>
-        {/* <button className="px-5 py-2 bg-white text-gray-600 rounded hover:bg-transparent hover:border hover:text-white">
+        <div className="inline-flex gap-4">
+          <Link to="/">Home</Link>
+          <Link to="/blog">Blog</Link>
+
+          <Link to="/login">
+            <HiUserCircle className="text-4xl"></HiUserCircle>
+            {/* <button className="px-5 py-2 bg-white text-gray-600 rounded hover:bg-transparent hover:border hover:text-white">
           Login
         </button> */}
-      </Link>
+          </Link>
+        </div>
+      </div>
+      <hr className="mt-12 border-t border-gray-700 mb-48" />
     </div>
   );
 };
