@@ -54,14 +54,13 @@ const Footer = () => {
           <p className="text-lg text-gray-300 mb-6">
             Address:
             <span>
-              {" "}
               302-1055, Higashiteragata
               <br /> City: Tama-shi, State: Tokyo
             </span>
           </p>
         </div>
       </div>
-      <hr className=" border border-gray-600 w-9/12 mx-auto mb-6 mt-8" />
+      <hr className=" border border-gray-800 w-9/12 mx-auto mb-6 mt-8" />
       <p className="text-sm text-gray-500 text-center">
         <span>© 2023 All rights reserved, Japanese Master Chef</span>
       </p>

@@ -10,7 +10,7 @@ const NavBar = () => {
 
       <Link to="/login">
         <HiUserCircle className="text-4xl"></HiUserCircle>
-        {/* <button className="px-5 py-2 bg-white text-gray-600 rounded">
+        {/* <button className="px-5 py-2 bg-white text-gray-600 rounded hover:bg-transparent hover:border hover:text-white">
           Login
         </button> */}
       </Link>

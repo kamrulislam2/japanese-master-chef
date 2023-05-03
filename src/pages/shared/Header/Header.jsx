@@ -7,7 +7,7 @@ const Header = () => {
     <div
       style={{
         backgroundImage: "url(" + "./banner-bg.jpg" + ")",
-        height: "100vh",
+        height: "120vh",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -28,6 +28,7 @@ const Header = () => {
           </h3>
           <NavBar></NavBar>
         </div>
+        <hr className="mt-12 border-t border-gray-700 mb-48" />
         <Banner></Banner>
       </div>
     </div>
