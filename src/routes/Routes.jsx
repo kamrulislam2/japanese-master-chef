@@ -12,18 +12,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () =>
-          fetch(
-            "https://chef-recipe-hunter-server-kamrulislam2.vercel.app/allChefData"
-          ),
       },
       {
         path: "/chef/:id",
         element: <SingleChefCard></SingleChefCard>,
-        loader: ({ params }) =>
-          fetch(
-            `https://chef-recipe-hunter-server-kamrulislam2.vercel.app/allChefData/${params.id}`
-          ),
       },
     ],
   },

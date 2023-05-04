@@ -41,7 +41,6 @@ const RecipeCard = ({ recipe }) => {
             />
           </p>
           <button disabled={!fav} onClick={handleFavorite}>
-            {/* <FaRegBookmark></FaRegBookmark> */}
             {fav ? <FaRegBookmark></FaRegBookmark> : <FaBookmark></FaBookmark>}
           </button>
         </div>

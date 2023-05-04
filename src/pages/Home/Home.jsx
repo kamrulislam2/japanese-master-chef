@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import ChefCard from "../../components/ChefCard/ChefCard";
 import BannerForHome from "../../layouts/BannerForHome/BannerForHome";
+import { ColorRing } from "react-loader-spinner";
 
 const Home = () => {
-  const data = useLoaderData();
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  console.log(data.chefs);
+  useEffect(() => {
+    setLoading(true);
+    fetch(
+      "https://chef-recipe-hunter-server-kamrulislam2.vercel.app/allChefData"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.chefs);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <div>
       <BannerForHome></BannerForHome>
@@ -14,9 +26,23 @@ const Home = () => {
         <h3 className="font-extrabold text-5xl text-center">Chefs Category</h3>
         <hr className="border-t mb-16 border-gray-400 w-3/12 mx-auto" />
         <div className="grid grid-cols-3 gap-8">
-          {data.chefs.map((chef) => (
-            <ChefCard key={chef.chefId} chef={chef}></ChefCard>
-          ))}
+          {loading ? (
+            <div className="ml-96 pl-52 mt-36">
+              <ColorRing
+                visible={true}
+                height="80"
+                width="80"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{}}
+                wrapperClass="blocks-wrapper"
+                colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+              />
+            </div>
+          ) : (
+            data.map((chef) => (
+              <ChefCard key={chef.chefId} chef={chef}></ChefCard>
+            ))
+          )}
         </div>
       </div>
     </div>
