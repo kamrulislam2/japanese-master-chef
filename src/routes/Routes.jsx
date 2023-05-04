@@ -2,12 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/Home/Home";
 import SingleChefCard from "../components/ChefCard/SingleChefCard";
-import Banner from "../layouts/BannerForHome/BannerForHome";
+import Login from "../pages/Login/Login/Login";
+import Register from "../pages/Login/Register/Register";
+import Error from "../pages/Error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -16,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/chef/:id",
         element: <SingleChefCard></SingleChefCard>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },
