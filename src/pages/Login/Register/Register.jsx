@@ -9,6 +9,7 @@ const Register = () => {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
+  // Creating new user
   const handleRegister = (event) => {
     setSuccess("");
     setError("");
@@ -41,6 +42,7 @@ const Register = () => {
     form.reset();
   };
 
+  // Updating user photo and name
   const updateUser = (loggedUser, name, photo) => {
     updateProfile(loggedUser, {
       displayName: name,

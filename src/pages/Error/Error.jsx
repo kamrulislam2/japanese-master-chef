@@ -13,6 +13,7 @@ const Error = () => {
     <div>
       <div className="px-40 pt-12 text-center">
         <NavBar></NavBar>
+        {/* Error page design with navbar */}
         <img
           className="h-96 rounded-lg w-2/3 mx-auto"
           src="./error-image.jpg"

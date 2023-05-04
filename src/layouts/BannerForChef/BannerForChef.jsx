@@ -6,6 +6,7 @@ const BannerForChef = ({ data }) => {
     data;
   return (
     <div>
+      {/* Banner layout for Chef recipe page */}
       <div
         className="px-40 pt-12 pb-36"
         style={{

@@ -31,6 +31,7 @@ const SingleChefCard = () => {
       </h2>
       {loading ? (
         <div className="ml-96 pl-80 mt-40">
+          {/* Loader during recipe data load */}
           <ColorRing
             visible={true}
             height="80"

@@ -9,6 +9,7 @@ const Blog = () => {
     <div className="px-40 mt-12 mb-40">
       <NavBar></NavBar>
 
+      {/* Blog q&a page */}
       <div className="w-1/2 mx-auto" ref={ref}>
         <h3 className="font-extrabold text-5xl text-center">
           Question & Answer
@@ -95,6 +96,7 @@ const Blog = () => {
         </div>
       </div>
 
+      {/* Converting blog page to pdf and downloading it */}
       <Pdf targetRef={ref} filename="code-example.pdf">
         {({ toPdf }) => (
           <div className="text-center mt-12">

@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
 
-  console.log(loading);
+  // loader for ignoring login page reload
   if (loading) {
     return (
       <div className="px-40 pt-12 mb-48">

@@ -22,6 +22,7 @@ const BannerForHome = () => {
           color: "white",
         }}
       >
+        {/* Banner layout for home page */}
         <NavBar></NavBar>
         <h2 className="text-4xl lg:text-7xl font-extrabold mb-12">
           Hot eats, cold treats.

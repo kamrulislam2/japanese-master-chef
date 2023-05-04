@@ -32,6 +32,7 @@ const Home = () => {
         <div className="grid lg:grid-cols-3 gap-4 lg:gap-8">
           {loading ? (
             <div className="ml-96 pl-52 mt-36">
+              {/* loader during data load */}
               <ColorRing
                 visible={true}
                 height="80"

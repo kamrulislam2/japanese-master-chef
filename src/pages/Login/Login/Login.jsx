@@ -11,6 +11,7 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Normal login by email and password
   const handleLogin = (event) => {
     setError("");
     event.preventDefault();
@@ -31,6 +32,7 @@ const Login = () => {
     form.reset();
   };
 
+  // Google login
   const handleLoginGoogle = (event) => {
     setError("");
     event.preventDefault();
@@ -46,6 +48,7 @@ const Login = () => {
       });
   };
 
+  //   Github login
   const handleGitHubLogin = (event) => {
     setError("");
     event.preventDefault();
