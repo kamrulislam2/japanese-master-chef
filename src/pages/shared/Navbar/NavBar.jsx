@@ -37,43 +37,28 @@ const NavBar = () => {
           >
             Blog
           </NavLink>
-
-          {loading ? (
-            <ColorRing
-              visible={true}
-              height="40"
-              width="40"
-              ariaLabel="blocks-loading"
-              wrapperStyle={{}}
-              wrapperClass="blocks-wrapper"
-              colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
-            />
-          ) : (
-            <div>
-              {user ? (
-                <div className="inline-flex gap-2">
-                  <img
-                    title={user.displayName}
-                    className="w-10 h-10 rounded-full"
-                    src={user.photoURL}
-                    alt=""
-                  />
-                  <button
-                    onClick={handleLogOut}
-                    className="px-3 py-1 bg-gray-800 text-white rounded hover:bg-transparent hover:border hover:border-gray-800 hover:text-gray-900"
-                  >
-                    Logout
-                  </button>
-                </div>
-              ) : (
-                <Link className="inline-flex gap-2" to="/login">
-                  <HiUserCircle className="text-4xl"></HiUserCircle>
-                  <button className="px-3 py-1 bg-gray-800 text-white rounded hover:bg-transparent hover:border hover:text-gray-800">
-                    Login
-                  </button>
-                </Link>
-              )}
+          {user ? (
+            <div className="inline-flex gap-2">
+              <img
+                title={user.displayName}
+                className="w-10 h-10 rounded-full"
+                src={user.photoURL}
+                alt=""
+              />
+              <button
+                onClick={handleLogOut}
+                className="px-3 py-1 bg-gray-800 text-white rounded hover:bg-transparent hover:border hover:border-gray-800 hover:text-gray-900"
+              >
+                Logout
+              </button>
             </div>
+          ) : (
+            <Link className="inline-flex gap-2" to="/login">
+              <HiUserCircle className="text-4xl"></HiUserCircle>
+              <button className="px-3 py-1 bg-gray-800 text-white rounded hover:bg-transparent hover:border hover:text-gray-800">
+                Login
+              </button>
+            </Link>
           )}
         </div>
       </div>

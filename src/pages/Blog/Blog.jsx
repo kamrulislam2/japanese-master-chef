@@ -1,11 +1,16 @@
 import React from "react";
 import NavBar from "../shared/Navbar/Navbar";
+import ReactDOM from "react-dom";
+import Pdf from "react-to-pdf";
 
 const Blog = () => {
+  const ref = React.createRef();
+
   return (
     <div className="px-40 mt-12 mb-40">
       <NavBar></NavBar>
-      <div className="w-1/2 mx-auto">
+
+      <div className="w-1/2 mx-auto" ref={ref}>
         <h3 className="font-extrabold text-5xl text-center">
           Question & Answer
         </h3>
@@ -90,6 +95,19 @@ const Blog = () => {
           </div>
         </div>
       </div>
+
+      <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => (
+          <div className="text-center mt-12">
+            <button
+              onClick={toPdf}
+              className="px-5 py-4 bg-gray-900 text-white text-xl font-medium rounded hover:bg-transparent hover:border hover:text-gray-800 hover:border-gray-900 inline-flex items-center gap-1"
+            >
+              Download The Page
+            </button>
+          </div>
+        )}
+      </Pdf>
     </div>
   );
 };

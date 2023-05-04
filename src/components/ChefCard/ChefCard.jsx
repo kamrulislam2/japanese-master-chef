@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegThumbsUp } from "react-icons/fa";
+import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 
 const ChefCard = ({ chef }) => {
@@ -7,7 +8,11 @@ const ChefCard = ({ chef }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <img className="h-72" src={picture} alt="chef" />
+        {/* Image will load when 5% image view done. */}
+
+        <LazyLoad threshold={0.95}>
+          <img className="h-72" src={picture} alt="chef" />
+        </LazyLoad>
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>

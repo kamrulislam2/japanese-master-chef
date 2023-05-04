@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const News = () => {
   return (
     <div className="mt-40">
-      <h3 className="text-center font-extrabold text-5xl ">Some recent News</h3>
+      <h3 className="text-center font-extrabold text-5xl ">
+        Recent Recipe News
+      </h3>
       <hr className="border-t mb-16 border-gray-400 w-4/12 mx-auto" />
 
       <div className="grid grid-cols-3 mt-24">
@@ -25,7 +28,9 @@ const News = () => {
               slice of tuna. Serve with wasabi...
             </p>
             <div className="card-actions justify-end">
-              <div className="badge badge-outline">Read More</div>
+              <Link to="/" className="badge badge-outline">
+                Read More
+              </Link>
             </div>
           </div>
         </div>
@@ -48,7 +53,9 @@ const News = () => {
               sake, mirin, and ginger in a pot
             </p>
             <div className="card-actions justify-end">
-              <div className="badge badge-outline">Read More</div>
+              <Link to="/" className="badge badge-outline">
+                Read More
+              </Link>
             </div>
           </div>
         </div>
@@ -71,7 +78,9 @@ const News = () => {
               Marinate the black cod for at least 24 hours....
             </p>
             <div className="card-actions justify-end">
-              <div className="badge badge-outline">Read More</div>
+              <Link to="/" className="badge badge-outline">
+                Read More
+              </Link>
             </div>
           </div>
         </div>
