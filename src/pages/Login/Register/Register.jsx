@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import NavBar from "../../shared/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
@@ -6,8 +6,12 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser, user } = useContext(AuthContext);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
 
   const handleRegister = (event) => {
+    setSuccess("");
+    setError("");
     event.preventDefault();
     const form = event.target;
 
@@ -18,14 +22,21 @@ const Register = () => {
 
     console.log(name, photo, email, password);
 
+    if (password.length < 6) {
+      return setError("Password must be at least 6 characters");
+    }
+
     createUser(email, password)
       .then((result) => {
         const loggedUser = result.user;
         updateUser(loggedUser, name, photo);
         console.log(loggedUser);
+        setSuccess("Registration successful");
       })
       .catch((error) => {
-        console.log(error);
+        if (error) {
+          setError(error.message);
+        }
       });
     form.reset();
   };
@@ -88,6 +99,10 @@ const Register = () => {
               placeholder="Password"
             />
           </label>
+          <p className="text-left mb-2 font-semibold text-green-700">
+            {success}
+          </p>
+          <p className="text-left mb-2 font-semibold text-red-600">{error}</p>
           <button
             className=" py-4 text-white text-lg font-medium rounded bg-gray-800 hover:bg-transparent hover:border hover:border-gray-800 hover:text-gray-800"
             type="submit"
