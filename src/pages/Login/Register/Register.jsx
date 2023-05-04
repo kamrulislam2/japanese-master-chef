@@ -1,15 +1,52 @@
-import React from "react";
+import React, { useContext } from "react";
 import NavBar from "../../shared/Navbar/Navbar";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProviders";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
+  const { createUser, user } = useContext(AuthContext);
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const form = event.target;
+
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log(name, photo, email, password);
+
+    createUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        updateUser(loggedUser, name, photo);
+        console.log(loggedUser);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    form.reset();
+  };
+
+  const updateUser = (loggedUser, name, photo) => {
+    updateProfile(loggedUser, {
+      displayName: name,
+      photoURL: photo,
+    })
+      .then(() => {})
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  console.log(user);
   return (
     <div className="px-40 pt-12">
       <NavBar></NavBar>
       <div className="w-1/2 mx-auto text-center mb-48 ">
-        <form className="card border shadow-xl p-10">
+        <form onSubmit={handleRegister} className="card border shadow-xl p-10">
           <h2 className="font-extrabold text-4xl mb-6">Please Register</h2>
           <label className="text-start flex flex-col">
             Your Name
@@ -26,7 +63,7 @@ const Register = () => {
             <input
               className="border px-2 py-4 rounded-lg mb-6 mt-2"
               type="text"
-              name="URL"
+              name="photo"
               required
               placeholder="Enter URL"
             />
@@ -55,7 +92,7 @@ const Register = () => {
             className=" py-4 text-white text-lg font-medium rounded bg-gray-800 hover:bg-transparent hover:border hover:border-gray-800 hover:text-gray-800"
             type="submit"
           >
-            Login
+            Register
           </button>
 
           <p className="mt-6">
