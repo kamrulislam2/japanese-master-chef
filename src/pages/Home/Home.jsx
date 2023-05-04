@@ -3,6 +3,7 @@ import ChefCard from "../../components/ChefCard/ChefCard";
 import BannerForHome from "../../layouts/BannerForHome/BannerForHome";
 import { ColorRing } from "react-loader-spinner";
 import AboutUs from "../AboutUs/AboutUs";
+import News from "../News/News";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -46,6 +47,7 @@ const Home = () => {
           )}
         </div>
         <AboutUs></AboutUs>
+        <News></News>
       </div>
     </div>
   );
