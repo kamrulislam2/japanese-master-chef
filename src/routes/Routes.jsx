@@ -5,6 +5,7 @@ import SingleChefCard from "../components/ChefCard/SingleChefCard";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import Error from "../pages/Error/Error";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/chef/:id",
-        element: <SingleChefCard></SingleChefCard>,
+        element: (
+          <PrivateRoute>
+            <SingleChefCard></SingleChefCard>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

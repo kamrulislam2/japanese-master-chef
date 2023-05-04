@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import NavBar from "../../shared/Navbar/Navbar";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 
 const Login = () => {
   const { signIn, signInGoogle, signInGitHub } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogin = (event) => {
     setError("");
@@ -20,6 +22,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        navigate(location.state?.from?.pathname || "/");
       })
       .catch((error) => {
         console.log(error);
@@ -36,6 +39,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        navigate(location.state?.from?.pathname || "/");
       })
       .catch((error) => {
         console.log(error);
@@ -50,6 +54,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        navigate(location.state?.from?.pathname || "/");
       })
       .catch((error) => {
         console.log(error);

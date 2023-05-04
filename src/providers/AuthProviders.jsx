@@ -8,6 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   GithubAuthProvider,
+  signOut,
 } from "firebase/auth";
 
 export const AuthContext = createContext(null);
@@ -35,6 +36,9 @@ const AuthProviders = ({ children }) => {
     return signInWithPopup(auth, githubProvider);
   };
 
+  const logOut = () => {
+    return signOut(auth);
+  };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
       setUser(loggedUser);
@@ -44,7 +48,14 @@ const AuthProviders = ({ children }) => {
     };
   }, []);
 
-  const authInfo = { createUser, user, signIn, signInGoogle, signInGitHub };
+  const authInfo = {
+    createUser,
+    user,
+    signIn,
+    signInGoogle,
+    signInGitHub,
+    logOut,
+  };
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
