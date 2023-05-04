@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { HiUserCircle } from "react-icons/hi";
 import { AuthContext } from "../../../providers/AuthProviders";
 import { ColorRing } from "react-loader-spinner";
 
 const NavBar = () => {
   const { user, logOut, loading } = useContext(AuthContext);
+  const [isActive, setIsActive] = useState(false);
 
   const handleLogOut = () => {
     logOut()
@@ -20,8 +21,22 @@ const NavBar = () => {
         <h3 className="font-extrabold text-4xl">Japanese Master Chef</h3>
 
         <div className="inline-flex gap-4">
-          <Link to="/">Home</Link>
-          <Link to="/blog">Blog</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "underline text-green-600" : ""
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "underline text-green-600" : ""
+            }
+            to="/blog"
+          >
+            Blog
+          </NavLink>
 
           {loading ? (
             <ColorRing
