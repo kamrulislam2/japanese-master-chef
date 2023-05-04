@@ -24,10 +24,12 @@ const Home = () => {
   return (
     <div>
       <BannerForHome></BannerForHome>
-      <div className="px-40  my-48">
-        <h3 className="font-extrabold text-5xl text-center">Chefs Category</h3>
+      <div className="px-6 lg:px-40  my-48">
+        <h3 className="font-extrabold text-2xl lg:text-5xl text-center">
+          Chefs Category
+        </h3>
         <hr className="border-t mb-16 border-gray-400 w-3/12 mx-auto" />
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-4 lg:gap-8">
           {loading ? (
             <div className="ml-96 pl-52 mt-36">
               <ColorRing

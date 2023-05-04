@@ -2,11 +2,13 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="px-40  mt-40">
+    <div className=" lg:px-40 pb-6 mt-40">
       <div className="card shadow-lg">
-        <h3 className="text-center font-extrabold text-5xl ">About Us</h3>
-        <hr className="border-t mb-16 border-gray-400 w-3/12 mx-auto" />
-        <p className="font-normal text-xl mt-12 p-10">
+        <h3 className="text-center font-extrabold text-2xl lg:text-5xl ">
+          About Us
+        </h3>
+        <hr className="border-t mb-6 border-gray-400 w-3/12 mx-auto" />
+        <p className="font-normal text-xl px-4 pb-10 lg:p-10">
           Beyond his culinary genius and the exquisite design of both his food
           and restaurants, Chef Morimoto’s business acumen has helped him
           succeed in other related industries. Morimoto Signature Series of beer

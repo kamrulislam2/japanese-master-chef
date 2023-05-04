@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ChefCard = ({ chef }) => {
   const { chefId, picture, name, experience_years, num_recipes, likes } = chef;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-full lg:w-96 bg-base-100 shadow-xl">
       <figure>
         {/* Image will load when 5% image view done. */}
 

@@ -14,7 +14,7 @@ const BannerForHome = () => {
       }}
     >
       <div
-        className="px-40 pt-12"
+        className="px-6 lg:px-40 pt-12"
         style={{
           height: "100%",
           width: "100%",
@@ -23,10 +23,10 @@ const BannerForHome = () => {
         }}
       >
         <NavBar></NavBar>
-        <h2 className="text-7xl font-extrabold mb-12">
+        <h2 className="text-4xl lg:text-7xl font-extrabold mb-12">
           Hot eats, cold treats.
         </h2>
-        <p className="font-normal text-xl w-4/6 leading-relaxed mb-8">
+        <p className="font-normal text-xl lg:w-4/6 leading-relaxed mb-8">
           There are some things money can't buy. For everything else, there's
           MasterCard. You deserve a break today. Wake up with the King. The
           flavour of nature Just Wow!

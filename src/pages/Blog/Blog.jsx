@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "../shared/Navbar/Navbar";
-import ReactDOM from "react-dom";
 import Pdf from "react-to-pdf";
 
 const Blog = () => {

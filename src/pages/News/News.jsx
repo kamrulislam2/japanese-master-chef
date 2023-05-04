@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const News = () => {
   return (
-    <div className="mt-40">
-      <h3 className="text-center font-extrabold text-5xl ">
+    <div className="mt-24 lg:mt-40">
+      <h3 className="text-center font-extrabold text-2xl lg:text-5xl ">
         Recent Recipe News
       </h3>
-      <hr className="border-t mb-16 border-gray-400 w-4/12 mx-auto" />
+      <hr className="border-t mb-16 border-gray-400 w-8/12 lg:w-4/12 mx-auto" />
 
-      <div className="grid grid-cols-3 mt-24">
-        <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="grid lg:grid-cols-3 mt-12 lg:mt-24">
+        <div className="card w-full lg:w-96 bg-base-100 shadow-xl mb-4">
           <figure>
             <img
               className="h-64 w-full"
@@ -35,7 +35,7 @@ const News = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-full lg:w-96 bg-base-100 shadow-xl mb-4">
           <figure>
             <img
               className="h-64 w-full"
@@ -60,7 +60,7 @@ const News = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-full lg:w-96 bg-base-100 shadow-xl mb-4">
           <figure>
             <img
               className="h-64 w-full"

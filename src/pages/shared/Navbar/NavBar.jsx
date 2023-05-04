@@ -2,11 +2,9 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HiUserCircle } from "react-icons/hi";
 import { AuthContext } from "../../../providers/AuthProviders";
-import { ColorRing } from "react-loader-spinner";
 
 const NavBar = () => {
-  const { user, logOut, loading } = useContext(AuthContext);
-  const [isActive, setIsActive] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut()
@@ -17,10 +15,12 @@ const NavBar = () => {
   };
   return (
     <div>
-      <div className="text-xl font-semibold flex items-center justify-between ">
-        <h3 className="font-extrabold text-4xl">Japanese Master Chef</h3>
+      <div className="text-xl font-semibold lg:flex items-center justify-between ">
+        <h3 className="font-bold lg:font-extrabold  text-2xl lg:text-4xl">
+          Japanese Master Chef
+        </h3>
 
-        <div className="inline-flex gap-4">
+        <div className="flex flex-col lg:flex-row  gap-4">
           <NavLink
             className={({ isActive }) =>
               isActive ? "underline text-green-600" : ""
@@ -62,7 +62,7 @@ const NavBar = () => {
           )}
         </div>
       </div>
-      <hr className="mt-12 border-t border-gray-700 mb-48" />
+      <hr className="mt-12 border-t border-gray-700 mb-24 lg:mb-48" />
     </div>
   );
 };
