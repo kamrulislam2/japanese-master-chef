@@ -22,7 +22,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        navigate(location.state?.from?.pathname || "/");
+        navigate(location.state?.from?.pathname || "/", { replace: true });
       })
       .catch((error) => {
         console.log(error);

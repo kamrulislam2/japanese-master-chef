@@ -22,10 +22,10 @@ const SingleChefCard = () => {
         setLoading(false);
       });
   }, []);
-
+  console.log(data);
   return (
     <div className="mb-48">
-      <BannerForChef data={data}></BannerForChef>
+      <BannerForChef data={data && data}></BannerForChef>
       <h2 className="mt-48 font-extrabold text-5xl text-center">
         Chef's Best Recipe
       </h2>

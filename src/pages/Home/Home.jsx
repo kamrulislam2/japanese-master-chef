@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ChefCard from "../../components/ChefCard/ChefCard";
 import BannerForHome from "../../layouts/BannerForHome/BannerForHome";
 import { ColorRing } from "react-loader-spinner";
+import AboutUs from "../AboutUs/AboutUs";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -44,6 +45,7 @@ const Home = () => {
             ))
           )}
         </div>
+        <AboutUs></AboutUs>
       </div>
     </div>
   );
