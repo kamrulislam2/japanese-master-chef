@@ -4,6 +4,7 @@ import BannerForHome from "../../layouts/BannerForHome/BannerForHome";
 import { ColorRing } from "react-loader-spinner";
 import AboutUs from "../AboutUs/AboutUs";
 import News from "../News/News";
+import Recipes from "./Recipes";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -24,6 +25,7 @@ const Home = () => {
   return (
     <div>
       <BannerForHome></BannerForHome>
+      <Recipes />
       <div className="px-6 lg:px-40  my-48">
         <h3 className="font-extrabold text-2xl lg:text-5xl text-center">
           Chefs Category

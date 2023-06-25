@@ -16,9 +16,11 @@ const NavBar = () => {
   return (
     <div>
       <div className="text-xl font-semibold lg:flex items-center justify-between ">
-        <h3 className="font-bold lg:font-extrabold  text-2xl lg:text-4xl">
-          Japanese Master Chef
-        </h3>
+        <Link to="/">
+          <h3 className="font-bold lg:font-extrabold  text-2xl lg:text-4xl">
+            Japanese Master Chef
+          </h3>
+        </Link>
 
         <div className="flex flex-col lg:flex-row  gap-4">
           <NavLink
