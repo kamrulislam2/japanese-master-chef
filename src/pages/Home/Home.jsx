@@ -8,6 +8,7 @@ import Recipes from "./Recipes";
 import Reviews from "./Reviews";
 import MobileApp from "./MobileApp";
 import QnA from "./QnA";
+import OurTeam from "./OurTeam";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -71,6 +72,7 @@ const Home = () => {
         <Reviews />
         <MobileApp />
         <QnA />
+        <OurTeam />
       </div>
     </div>
   );

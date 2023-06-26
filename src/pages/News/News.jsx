@@ -5,9 +5,9 @@ const News = () => {
   return (
     <div className="mt-24 lg:mt-40">
       <h3 className="text-center font-extrabold text-2xl lg:text-5xl ">
-        Recent Recipe News
+        Recent News
       </h3>
-      <hr className="border-t border-gray-400 w-1/2 lg:w-8/12 lg:w-4/12 mx-auto" />
+      <hr className="border-t border-gray-400 w-1/3 lg:w-3/12 mx-auto" />
       <p className="text-lg mt-6 w-full lg:w-1/2 mx-auto text-center mb-16">
         Stay up to date with the latest recipe news from the culinary world, as
         our website brings you the freshest and most exciting developments in

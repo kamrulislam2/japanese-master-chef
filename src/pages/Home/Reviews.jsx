@@ -19,8 +19,6 @@ const Reviews = () => {
       });
   }, []);
 
-  console.log(reviews);
-
   return (
     <div className="lg:px-40 text-center mt-36">
       <h3 className="text-center font-extrabold text-2xl lg:text-5xl">

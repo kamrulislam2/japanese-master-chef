@@ -9,7 +9,6 @@ const QnA = () => {
 
   const onSubmit = (data) => {
     setIsEmail(data.email);
-    console.log(data);
     handleSentEmail(data.email);
     reset();
   };
