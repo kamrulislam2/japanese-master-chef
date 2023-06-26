@@ -5,6 +5,8 @@ import { ColorRing } from "react-loader-spinner";
 import AboutUs from "../AboutUs/AboutUs";
 import News from "../News/News";
 import Recipes from "./Recipes";
+import Reviews from "./Reviews";
+import MobileApp from "./MobileApp";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -30,10 +32,22 @@ const Home = () => {
         <h3 className="font-extrabold text-2xl lg:text-5xl text-center">
           Chefs Category
         </h3>
-        <hr className="border-t mb-16 border-gray-400 w-3/12 mx-auto" />
-        <div className="grid lg:grid-cols-3 gap-4 lg:gap-8">
+        <hr className="border-t border-gray-400 w-1/3 lg:w-3/12 mx-auto" />
+        <p className="text-lg mt-6 w-full lg:w-1/2 mx-auto text-center mb-16">
+          Experience the passion and expertise of these talented chefs as they
+          create culinary masterpieces that will enchant your taste buds and
+          leave you craving for more.
+        </p>
+        <div className="grid lg:grid-cols-3 gap-4 lg:gap-8 relative">
           {loading ? (
-            <div className="ml-96 pl-52 mt-36">
+            <div
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            >
               {/* loader during data load */}
               <ColorRing
                 visible={true}
@@ -53,6 +67,8 @@ const Home = () => {
         </div>
         <AboutUs></AboutUs>
         <News></News>
+        <Reviews />
+        <MobileApp />
       </div>
     </div>
   );

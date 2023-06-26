@@ -9,7 +9,7 @@ const Recipes = () => {
       <h2 className="font-extrabold text-2xl lg:text-5xl text-center">
         Our Special Recipes
       </h2>
-      <hr className="border-t border-gray-400 w-1/3 mx-auto" />
+      <hr className="border-t border-gray-400 w-1/2 lg:w-1/3 mx-auto" />
       <p className="text-lg mt-6 w-full lg:w-1/2 mx-auto text-center mb-16">
         Japanese cuisine is an artful harmony of flavors, colors, and textures,
         where every dish is a testament to simplicity, precision, and the beauty
