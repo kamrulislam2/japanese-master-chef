@@ -32,7 +32,7 @@ const QnA = () => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className=" flex justify-between border px-16 py-5 bg-base-100 shadow-2xl rounded-full w-1/2 mx-auto"
+        className=" flex justify-between border px-16 py-5 bg-base-100 shadow-2xl rounded-full lg:w-1/2 mx-auto"
       >
         <input
           className="text-lg px-5 py-2 w-9/12 rounded-full"
