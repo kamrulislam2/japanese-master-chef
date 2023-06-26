@@ -7,6 +7,7 @@ import News from "../News/News";
 import Recipes from "./Recipes";
 import Reviews from "./Reviews";
 import MobileApp from "./MobileApp";
+import QnA from "./QnA";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -69,6 +70,7 @@ const Home = () => {
         <News></News>
         <Reviews />
         <MobileApp />
+        <QnA />
       </div>
     </div>
   );
