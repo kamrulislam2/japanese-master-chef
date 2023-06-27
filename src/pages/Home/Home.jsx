@@ -32,6 +32,8 @@ const Home = () => {
     <div>
       <BannerForHome></BannerForHome>
       <Recipes />
+
+      <FoodGallery />
       <div className="px-6 lg:px-40  my-48">
         <h3 className="font-extrabold text-2xl lg:text-5xl text-center">
           Chefs Category
@@ -75,7 +77,6 @@ const Home = () => {
         <MobileApp />
         <QnA />
         <OurTeam />
-        <FoodGallery />
         <ContactUs />
       </div>
     </div>
