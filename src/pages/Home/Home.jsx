@@ -10,6 +10,7 @@ import MobileApp from "./MobileApp";
 import QnA from "./QnA";
 import OurTeam from "./OurTeam";
 import FoodGallery from "./FoodGallery";
+import ContactUs from "./ContactUs";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -75,6 +76,7 @@ const Home = () => {
         <QnA />
         <OurTeam />
         <FoodGallery />
+        <ContactUs />
       </div>
     </div>
   );
